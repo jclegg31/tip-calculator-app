@@ -9,53 +9,96 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightgray;
+  background-color: #c5e4e7;
+}
+
+#main-logo {
+  padding-top: 3.125em;
+  width: 110%;
 }
 
 .main-container {
-  width: 375px;
-  height: 933px;
-  margin-top: 10px;
-  background-color: #c5e4e7;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  position: relative;
-}
-
-.main-container img {
-  margin-top: 2.5em;
-}
-
-.inside-container {
   background-color: #fff;
   width: 375px;
   height: 789px;
-  position: absolute;
-  bottom: 0;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-radius: 25px;
+
+  margin-top: 2.1875em;
 }
 
-.bill-input {
-  display: flex;
+.bill-container,
+.select-tip-container {
+  margin: 0 auto;
   width: 100%;
-  position: relative;
+  padding: 1.5em;
+  /* border: 1px solid red; */
+}
+
+.bill-container label,
+.select-tip-label {
+  font-weight: 700;
+  color: #5e7a7d;
+  font-size: 1.125rem;
+  margin-bottom: 0.5em;
 }
 
 .bill-input input {
   width: 100%;
-  font-size: 25px;
-  background-color: #c5e4e7;
+  /* padding-left: 35px; Adjust as needed */
+  padding: 0.25em;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #00474b;
+  background-color: #f3f9fa;
+  background-image: url('/images/icon-dollar.svg');
+  background-repeat: no-repeat;
+  background-position: 15px center; /* Adjust position as needed */
 }
 
-.bill-input img {
-  width: 20px;
+.bill-input input::before {
+  content: '$';
   position: absolute;
-  top: 15px;
-  left: 1rem;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bill-input input::placeholder {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  padding-right: 20px; /* Adjust as needed */
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #00474b;
+}
+
+.tip-button-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tip-button-container button {
+  width: 47%;
+  margin: 0.35em 0;
+  padding: 0.25em;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.65rem;
+  color: #fff;
+  background-color: #00474b;
+}
+
+#custom {
+  background-color: #f3f9fa;
+  color: #547878;
 }
 
 /* Feel free to remove these styles or customise in your own stylesheet 👍  */
