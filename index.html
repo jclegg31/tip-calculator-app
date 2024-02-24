@@ -27,15 +27,12 @@
     <section class="bill-container">
       <label for="bill">Bill</label>
       <div class="bill-input">
-        <!-- <img src="./images/icon-dollar.svg" alt="dollar"> -->
         <input type="text" inputmode="numeric" placeholder="142.55" id="bill">
-
-
       </div>
     </section>
 
     <section class="select-tip-container">
-      <p class="select-tip-label">Select Tip %</p>
+      <label class="select-tip-label">Select Tip %</label>
       <div class="tip-button-container">
         <button class="five">5%</button>
         <button class="ten">10%</button>
@@ -46,19 +43,33 @@
       </div>
     </section>
 
-    <!--      <section class="num-people-container">
-        Number of People
-      </section>
+    <section class="num-people-container">
+      <label class="num-people-label">Number of People</label>
+      <div class="people-input">
+        <input type="text" inputmode="numeric" placeholder="5" id="people">
+      </div>
+    </section>
 
-      <section class="total-section">
-        Tip Amount
-        / person
+    <section class="total-section-container">
 
-        Total
-        / person
+      <div class="tip-amt-container">
+        <div class="tip-per-persion">
+          <p class="tip-amt">Tip Amount</p>
+          <p class="per-person">/ person</p>
+        </div>
+        <div class="display-tip">$4.27</div>
+      </div>
 
-        Reset
-      </section> -->
+      <div class="total-amt-container">
+        <div class="total-per-person">
+          <p class="total-amt">Total</p>
+          <p class="per-person">/ person</p>
+        </div>
+        <div class="display-total">$32.79</div>
+      </div>
+
+      <button class="reset">RESET</button>
+    </section>
 
 
   </main>

@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Space Mono', monospace;
+  /* border: 1px solid blue; */
 }
 
 body {
@@ -27,15 +28,18 @@ body {
 }
 
 .bill-container,
-.select-tip-container {
+.select-tip-container,
+.num-people-container,
+.total-section-container {
   margin: 0 auto;
   width: 100%;
-  padding: 1.5em;
+  padding: 1.5em 1.5em 1em 1.5em;
   /* border: 1px solid red; */
 }
 
 .bill-container label,
-.select-tip-label {
+.select-tip-label,
+.num-people-label {
   font-weight: 700;
   color: #5e7a7d;
   font-size: 1.125rem;
@@ -44,7 +48,6 @@ body {
 
 .bill-input input {
   width: 100%;
-  /* padding-left: 35px; Adjust as needed */
   padding: 0.25em;
   margin-top: 8px;
   border: none;
@@ -56,10 +59,27 @@ body {
   background-color: #f3f9fa;
   background-image: url('/images/icon-dollar.svg');
   background-repeat: no-repeat;
-  background-position: 15px center; /* Adjust position as needed */
+  background-position: 15px center;
 }
 
-.bill-input input::before {
+.people-input input {
+  width: 100%;
+  padding: 0.25em;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #00474b;
+  background-color: #f3f9fa;
+  background-image: url('/images/icon-person.svg');
+  background-repeat: no-repeat;
+  background-position: 15px center;
+}
+
+.bill-input input::before,
+.people-input input::before {
   content: '$';
   position: absolute;
   left: 10px;
@@ -67,7 +87,8 @@ body {
   transform: translateY(-50%);
 }
 
-.bill-input input::placeholder {
+.bill-input input::placeholder,
+.people-input input::placeholder {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -77,6 +98,8 @@ body {
   font-size: 1.5rem;
   color: #00474b;
 }
+
+/* Select Tip Section */
 
 .tip-button-container {
   display: flex;
@@ -96,9 +119,69 @@ body {
   background-color: #00474b;
 }
 
+.tip-button-container button:hover {
+  background-color: #26c2ae;
+  color: #00474b;
+}
+
+/* Custom Button under Select Tip % */
+
 #custom {
   background-color: #f3f9fa;
   color: #547878;
+  text-align: right;
+  padding-right: 15px;
+}
+
+#custom:hover {
+  outline: 2px solid #26c2ae;
+}
+
+/* Total Section where Tip amount and total appear */
+
+.total-section-container {
+  background-color: #00474b;
+  width: 87%;
+  border-radius: 10px;
+}
+
+.tip-amt-container,
+.total-amt-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid green; */
+  margin: 15px 0;
+}
+
+.tip-amt,
+.total-amt {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.per-person {
+  color: #7f9d9f;
+  font-size: 0.75rem;
+}
+
+.display-tip,
+.display-total {
+  color: #26c2ae;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* Reset button */
+.reset {
+  background-color: #26c2ae;
+  border: none;
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #00474b;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /* Feel free to remove these styles or customise in your own stylesheet 👍  */
