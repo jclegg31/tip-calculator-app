@@ -46,6 +46,8 @@ body {
   margin-bottom: 0.5em;
 }
 
+/* Enter total amount for the bill */
+
 .bill-input input {
   width: 100%;
   padding: 0.25em;
@@ -62,6 +64,7 @@ body {
   background-position: 15px center;
 }
 
+/* Enter the number of People */
 .people-input input {
   width: 100%;
   padding: 0.25em;
@@ -100,7 +103,6 @@ body {
 }
 
 /* Select Tip Section */
-
 .tip-button-container {
   display: flex;
   justify-content: space-between;
@@ -182,6 +184,10 @@ body {
   color: #00474b;
   padding: 10px;
   border-radius: 5px;
+}
+
+#reset:hover {
+  background-color: #9fe8df;
 }
 
 /* Feel free to remove these styles or customise in your own stylesheet 👍  */
