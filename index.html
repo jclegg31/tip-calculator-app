@@ -27,26 +27,27 @@
     <section class="bill-container">
       <label for="bill">Bill</label>
       <div class="bill-input">
-        <input type="text" inputmode="numeric" placeholder="142.55" id="bill">
+        <input type="text" inputmode="numeric" placeholder="0" id="bill">
       </div>
     </section>
 
     <section class="select-tip-container">
       <label class="select-tip-label">Select Tip %</label>
       <div class="tip-button-container">
-        <button class="five">5%</button>
-        <button class="ten">10%</button>
-        <button class="fifteen">15%</button>
-        <button class="twenty-five">25%</button>
-        <button class="fifty">50%</button>
-        <button id="custom" class="custom">Custom</button>
+        <button type="button" class="five">5%</button>
+        <button type="button" class="ten">10%</button>
+        <button type="button" class="fifteen">15%</button>
+        <button type="button" class="twenty-five">25%</button>
+        <button type="button" class="fifty">50%</button>
+        <button type="button" id="custom" class="custom">Custom</button>
       </div>
     </section>
 
     <section class="num-people-container">
       <label class="num-people-label">Number of People</label>
+      <label for="not-zero" class="not-zero-label hidden">Can't be zero</label>
       <div class="people-input">
-        <input type="text" inputmode="numeric" placeholder="5" id="people">
+        <input type="text" inputmode="numeric" placeholder="0" id="people">
       </div>
     </section>
 
@@ -57,7 +58,7 @@
           <p class="tip-amt">Tip Amount</p>
           <p class="per-person">/ person</p>
         </div>
-        <div class="display-tip">$4.27</div>
+        <span id="display-tip" class="display-tip">$0.00</span>
       </div>
 
       <div class="total-amt-container">
@@ -65,10 +66,10 @@
           <p class="total-amt">Total</p>
           <p class="per-person">/ person</p>
         </div>
-        <div class="display-total">$32.79</div>
+        <span id="display-total" class="display-total">$0.00</span>
       </div>
 
-      <button id="reset" class="reset">RESET</button>
+      <button type="reset" id="reset" class="reset">RESET</button>
     </section>
 
 
