@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     this.value = this.value.replace(/[^0-9.]/g, '');
   });
 
-  peoplInput.addEventListener('input', function () {
+  peopleInput.addEventListener('input', function () {
     this.value = this.value.replace(/[^0-9.]/g, '');
   });
 });
